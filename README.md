@@ -35,3 +35,41 @@ python main.py komutu ile deployment serverı başlat
 Kaynaklar
 1. https://www.twilio.com/docs/usage/tutorials/how-to-set-up-your-python-and-flask-development-environment
 2. https://werkzeug.palletsprojects.com/en/2.1.x/tutorial/
+
+# Python Flask application deployment on IIS
+
+Setup wfastcgi and web.config
+
+2. Setup wfastcgi and web.config:
+Now that our app is ready to deploy, next we need to set up wfastcgi. Start with installing and activating CGI in your server. you can do this by opening your Server Manager. Click on add role and features
+
+
+Keep clicking next to reach Server Roles then select
+Web Server (IIS)>Web Server>Application Developement>CGI
+then click next to install it.
+
+
+Now go back to your command prompt and install wfastcgi using this command
+
+pip install wfastcgi
+then run the following command to enable it in the current environment.
+
+wfastcgi-enable
+the output should be something like this
+
+https://mtuseeq.medium.com/how-to-deploy-flask-app-on-windows-server-using-fastcgi-and-iis-73d8139d5342
+
+https://medium.com/@bilalbayasut/deploying-python-web-app-flask-in-windows-server-iis-using-fastcgi-6c1873ae0ad8
+
+Sonra bakılacak
+https://flask-httpauth.readthedocs.io/en/latest/#flask_httpauth.HTTPBasicAuth
+
+
+
+
+
+
+
+
+
+
